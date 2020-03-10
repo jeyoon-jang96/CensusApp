@@ -1,11 +1,15 @@
-#library(UScensus2010)
+
+library(shiny)
 library(maps)
 library(mapproj)
-library(shiny)
 
+# Load data ----
 counties <- readRDS("counties.rds")
-percent_map(counties$white, "darkgreen", "% White")
 
+# Source helper functions -----
+source("helpers.R")
+
+# User interface ----
 ui <- fluidPage(
   titlePanel("censusVis"),
   
@@ -56,4 +60,3 @@ server <- function(input, output) {
 
 # Run app ----
 shinyApp(ui, server)
-
