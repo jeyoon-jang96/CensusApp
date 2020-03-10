@@ -1,4 +1,4 @@
-library(UScensus2010)
+#library(UScensus2010)
 library(maps)
 library(mapproj)
 library(shiny)
